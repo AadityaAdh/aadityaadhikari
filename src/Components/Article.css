@@ -1,0 +1,30 @@
+.articlecontainer{
+    height: 40vh;
+    width: 80%;
+    
+}
+
+.articletopcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    color: white;
+}
+
+.articlebottomcontainer{
+    display: grid;
+    grid-template-rows: 10vh 10vh;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.articleitemscontainer{
+    color: white;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}

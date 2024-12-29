@@ -1,0 +1,118 @@
+.herocontainer{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    animation: appearanimation 5s;
+    
+}
+
+@keyframes appearanimation {
+    from{
+        opacity:0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+    
+}
+
+.heroitemscontainer{
+    width: 90%;
+    height: 60%;
+    
+    /*
+    background-image: url('dots.svg');
+    background-size: 10% 20%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    */
+    
+
+
+}
+
+.heroheythere{
+    color: aquamarine;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.heromyname{
+    color: white;
+    font-size: 128px;
+}
+.herowho{
+    color: grey;
+    font-size: 44px;
+}
+
+.herocomputerengineer{
+    color: white;
+    font-size: 79px;
+}
+
+.herospecalize{
+    color: grey;
+    font-size: 40px;
+}
+
+.herostatus{
+    color: grey;
+    font-size: 40px;
+}
+
+.herobuttons{
+    background-color: rgb(15, 15, 15);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    
+    
+    
+}
+.herobuttons:hover{
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
+    
+}
+
+.heroicons{
+    color: aquamarine;
+    font-size: 25px;
+}
+
+
+@media(max-width:800px){
+    .heroheythere{
+        font-size: 30px;
+    }
+    .heromyname{
+        font-size: 61px;
+    }
+    .herocomputerengineer{
+        font-size: 40px;
+    }
+    .herowho{
+        font-size: 30px;
+    }
+    .herospecalize{
+        font-size: 30px;
+    }
+    .herostatus{
+        font-size: 30px;
+    }
+    .herobuttons{
+        width: 11vh;
+    }
+
+
+
+}
+

@@ -1,0 +1,132 @@
+
+
+.navbarcontainer{
+    width: 80%;
+    height: 100%;
+    background-color: black;
+    border-bottom: 1px grey solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: toptobuttom 2s;
+}
+@keyframes toptobuttom {
+    from{
+        opacity:0;
+        transform: translate(0,-120px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    
+}
+
+.navbarleftitemscontainer{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbarleftitemscontainer p:hover{
+    color: red;
+    cursor: help;
+    
+}
+
+.navbarrightitemscontainer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuicon{
+    display: none;
+}
+
+.navbarbuttons{
+    background-color: transparent;
+    border: none;
+    color: white;
+    
+}
+
+.navbarbuttons:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.mobilemenucontainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.mobilemenuitemscontainer{
+    background-color: black;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.mobilenavbarbuttons{
+    height: 10vh;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+}
+.mobilenavbarbuttons:hover{
+    cursor: pointer;
+    color: red;
+}
+.mobilemenuitemscontainer p{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px grey solid;
+    height: 7vh;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    
+    
+}
+
+.navbarrightitemscontainer p:hover{
+    cursor: pointer;
+}
+
+
+
+@media(max-width:800px){
+    .menuicon{
+        display: block;
+    }
+
+    .navbarbuttons{
+        display: none;
+    }
+
+    .navbarrightitemscontainer{
+        justify-content: flex-end;
+    }
+
+}

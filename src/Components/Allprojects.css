@@ -1,0 +1,71 @@
+.allprojectscontainer{
+    width: 80%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.allprojectssearchcontainer{
+    display: flex;
+    align-items: center;
+}
+.allprojectssearchcontainer input{
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid grey;
+    font-size: 30px;
+    border-right: none;
+    color: white;
+    
+}
+
+.allprojectssearchcontainer p{
+    background-color: transparent;
+    border: 1px solid grey;
+    border-left: none;
+
+
+    
+    width: 1.5vw;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 36px;
+
+}
+
+.allprojectsupcontainer{
+    
+    border-bottom: 0.1px solid grey;
+    width: 100%;
+}
+
+.allprojectsdowncontainer{
+    display: grid;
+    width: 100%;
+    gap: 2px;
+    grid-template-columns: 50% 50%;
+}
+
+.allprojectsprojectcard img{
+    height: 10px;
+    width: 100%;
+}
+.allprojectsprojectcard{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.allprojectsprojectcardtextsection{
+    width: 95%;
+}
