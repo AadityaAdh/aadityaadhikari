@@ -14,9 +14,9 @@ export default function Ending() {
         Feel free to get in touch and talk more about your project or job offerings.
         </p>
         <div className="endingbuttoncontainer">
-        <button className='linkedinbuttons'><FaLinkedin />LinkedIn</button>
-        <button><MdEmail />Email</button>
-        <button><IoDocumentText />Resume</button>
+        <a href='https://www.linkedin.com/in/aaditya-adhikari-b82ba028b/' target='_blank' className='linkedinbuttons'><FaLinkedin />LinkedIn</a>
+        <a href='mailto:aaditya.adh@gmail.com' target='_blank'><MdEmail />aEmail</a>
+        <a href='/AadityaAdh.pdf' target="_blank"><IoDocumentText />Resume</a>
 
         </div>
 

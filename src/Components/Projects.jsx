@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Projects.css'
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
@@ -24,6 +24,20 @@ export default function Projects() {
         reset:          true,    // If the tilt effect has to be reset on exit.
         easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
     }
+    useEffect(()=>{
+        let projectcontainer=document.querySelector('.projectscontainer');
+        let windowheight=window.innerHeight;
+    
+      let mydistfromparent=projectcontainer.offsetTop;
+      let myheight=projectcontainer.offsetHeight;
+        window.onscroll=function(){
+          let katiscrollvayo=window.scrollY+windowheight;
+          if(katiscrollvayo>mydistfromparent&&katiscrollvayo<mydistfromparent+myheight){
+            projectcontainer.classList.add('bottomtotopanimationclass1')
+          }
+          
+        }
+      },[])
   return (
     <div className='projectscontainer'>
         <div className="projectsleftitemscontainer">
@@ -44,7 +58,12 @@ export default function Projects() {
                 <br/><br/>
                 <hr/>
                 <br/>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae exercitationem dignissimos iste esse rerum sunt fugiat mollitia eum distinctio nesciunt debitis itaque aperiam tempore accusantium, provident expedita unde modi!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                     repudiandae exercitationem dignissimos iste esse rerum sunt fugiat 
+                     mollitia eum distinctio nesciunt debitis itaque aperiam tempore accusantium,
+                      provident expedita unde modi!</p>
+                
+                
 
 
             </div>

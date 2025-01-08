@@ -3,7 +3,7 @@
     height: 100%;
     background-color: rgb(0, 0, 0);
     display: flex;
-    overflow: hidden;
+    
 
 }
 
@@ -180,6 +180,24 @@
     
     
 }
+
+.bottomtotopanimationclass1{
+    animation: bottomtotopanimation1 5s;
+}
+
+@keyframes bottomtotopanimation1{
+    from{
+        transform: translateY(300px);
+        
+    }
+    to{
+        transform: translateY(0);
+        
+    }
+}
+
+
+
 
 
 

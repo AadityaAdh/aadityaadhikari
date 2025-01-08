@@ -15,8 +15,8 @@ export default function Hero() {
             <p className='herostatus'>⚡ Searching for job</p>
             <br/>
             <button href='#' className='herobuttons'><span className='heroicons'><FaGithub /></span>Github</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className='herobuttons'><span className='heroicons'><FaLinkedin /></span>LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className='herobuttons'><span className='heroicons'><MdEmail /></span>Email</button>
+            <button href='#' className='herobuttons'><span className='heroicons'><FaLinkedin /></span>LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button href='#' className='herobuttons'><span className='heroicons'><MdEmail /></span>Email</button>
 
             
             

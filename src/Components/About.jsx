@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.css'
 
 export default function About() {
+  
+  useEffect(()=>{
+    let aboutcontainer=document.querySelector('.aboutcontainer');
+    let windowheight1=window.innerHeight;
+
+  let mydistfromparent=aboutcontainer.offsetTop;
+  let myheight=aboutcontainer.offsetHeight;
+    window.onscroll=function(){
+      let katiscrollvayo=window.scrollY+windowheight1;
+      if(katiscrollvayo>mydistfromparent&&katiscrollvayo<mydistfromparent+myheight){
+        aboutcontainer.classList.add('bottomtotopanimationclass')
+      }
+      
+    }
+  },[])
   return (
     <div className='aboutcontainer'>
       <div className="aboutleftitemscontainer">

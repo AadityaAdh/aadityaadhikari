@@ -70,3 +70,27 @@
     z-index: 1;
     background-color: aquamarine;
 }
+
+
+.bottomtotopanimationclass{
+    animation: bottomtotopanimation 5s;
+}
+
+@keyframes bottomtotopanimation{
+    from{
+        transform: translateY(300px);
+        
+    }
+    to{
+        transform: translateY(0);
+        
+    }
+}
+
+.displayclassnone{
+    display: none;
+}
+
+.displayclassflex{
+    display: flex;
+}
