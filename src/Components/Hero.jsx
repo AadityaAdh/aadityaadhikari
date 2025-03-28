@@ -11,12 +11,14 @@ export default function Hero() {
             <p className='heroheythere'>Hey There I'm </p>
             <h1 className='heromyname'>Aaditya Adhikari.</h1>
             <p className='herowho'><span className='herocomputerengineer'>Computer Engineer.</span>A self-taught developer with an<br/> interest in Computer Science</p>
-            <p className='herospecalize'>🚀Currently Specalizing</p>
-            <p className='herostatus'>⚡ Searching for job</p>
+            <p className='herospecalize'>🚀Currently Specalizing In Data Engineering</p>
+            <p className='herostatus'>⚡ Intern at GrowByData</p>
             <br/>
+            <div className='hero_buttons'>
             <button href='#' className='herobuttons'><span className='heroicons'><FaGithub /></span>Github</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button href='#' className='herobuttons'><span className='heroicons'><FaLinkedin /></span>LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button href='#' className='herobuttons'><span className='heroicons'><MdEmail /></span>Email</button>
+            </div>
 
             
             

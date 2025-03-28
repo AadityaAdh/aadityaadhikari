@@ -10,12 +10,12 @@ export default function Ending() {
         <h1>Keep In Touch</h1>
 
         <p>
-        I'm currently looking for a job.
-        Feel free to get in touch and talk more about your project or job offerings.
+        I'm currently Specalizing in Data Engineering.<br></br>
+        Feel free to get in touch and talk more about your project.
         </p>
         <div className="endingbuttoncontainer">
         <a href='https://www.linkedin.com/in/aaditya-adhikari-b82ba028b/' target='_blank' className='linkedinbuttons'><FaLinkedin />LinkedIn</a>
-        <a href='mailto:aaditya.adh@gmail.com' target='_blank'><MdEmail />aEmail</a>
+        <a href='mailto:aaditya.adh@gmail.com' target='_blank'><MdEmail />Email</a>
         <a href='/AadityaAdh.pdf' target="_blank"><IoDocumentText />Resume</a>
 
         </div>

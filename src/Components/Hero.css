@@ -88,6 +88,22 @@
     font-size: 25px;
     
 }
+.hero_buttons{
+    display: flex;
+    width: 40%;
+    
+    height: 10vh;
+    justify-content: space-between;
+    border-radius: 30px;
+
+}
+
+.hero_buttons button{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

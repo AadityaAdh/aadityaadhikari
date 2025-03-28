@@ -10,7 +10,7 @@
 .projectsleftitemscontainer{
     height: 100%;
     width: 50%;
-    border-right: 10px solid white;
+    
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -22,7 +22,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 70px;
 
 
 }
@@ -40,11 +40,11 @@
     align-items: center;
     border-radius: 30px;
     overflow: hidden;
-    background-image: conic-gradient(from var(--angle),transparent 70%,#006aff);
+    background-image: conic-gradient(from var(--angle),transparent 70%,#70e6e2);
     z-index: 100;
 
     
-    height: 45vh;
+    
     
 
     animation: 3s borderspin  linear infinite;
@@ -75,8 +75,8 @@
 
 
 .projectsproject1container{
-    height: 90%;
-    width: 95%;
+    
+    width: 98%;
     overflow: hidden;
     background-color: rgb(24, 24, 23);
     border: 1px solid grey;
@@ -88,25 +88,12 @@
 .projectsproject1container img{
     height: 50%;
     width: 100%;
+    
 }
 .projectsproject1{
     display: flex;
 }
-.ropecontainer{
-    width: 5%;
-    
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
 
-.ropecontainer img{
-    width: 100%;
-    transform: scale(15);
-    
-    
-}
 
 .projectsnameandlink{
     
@@ -121,19 +108,47 @@
 .projectsprojectname{
     color: white;
 }
+.project_descriptions{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.projectsproject1container button{
-    height: 5vh;
-    width: 7vw;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-size: 22px;
+
+
 
 }
+.projects_buttons{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+}
+.projects_buttons button{
+    
+        height: 80%;
+        width: 24%;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: 15px;
+    
+    
+}
+
+
+.ninetyfivewidth{
+    width: 95%;
+}
+
+
 
 .projectsreact{
     background-color: rgb(116, 185, 246);
+    width: 100px;
 }
 
 .projectsnode{
@@ -147,6 +162,15 @@
 .projectsmongo{
     background-color: green;
 }
+.projectspython{
+    background-color: yellow;
+}
+.projectstensorflow{
+    background-color: orange;
+}
+.projectsopencv{
+    background-color: blue;
+}
 
 .projectsproject2{
     display: flex;
@@ -155,10 +179,10 @@
 
 .projectsproject2container{
     background-color: rgb(31, 31, 30);
-    height: 40vh;
+    
     border-radius: 10px;
     overflow: hidden;
-    width: 95%;
+    width: 98%;
     color: white;
 }
 
@@ -169,17 +193,7 @@
 
 
 
-.ropecontainer2{
-    width: 5%;
-    overflow: hidden;
-}
 
-.ropecontainer2 img{
-    width: 100%;
-    transform: scale(15);
-    
-    
-}
 
 .bottomtotopanimationclass1{
     animation: bottomtotopanimation1 5s;
@@ -193,6 +207,18 @@
     to{
         transform: translateY(0);
         
+    }
+}
+
+@media(max-width:900px){
+    .projectsnameandlink{
+        font-size: 7px;
+    }
+    .projects_buttons{
+        height: 3vh;
+    }
+    .projects_buttons button{
+        font-size: 7px;
     }
 }
 
