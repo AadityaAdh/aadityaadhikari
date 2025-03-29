@@ -123,6 +123,10 @@
 @media(max-width:1000px){
     .hero_buttons{
         width: 100%;
+        font-size: 0.7rem;
+    }
+    .herobuttons{
+        font-size: 0.7rem;
     }
 
 

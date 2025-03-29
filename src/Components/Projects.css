@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 16px;
     overflow: hidden;
     background-image: conic-gradient(from var(--angle),transparent 70%,#70e6e2);
     z-index: 100;
@@ -96,7 +96,7 @@
     overflow: hidden;
     background-color: black;
     
-    border-radius: 10px;
+    border-radius: 1px;
     color: white;
 
 }
@@ -217,7 +217,7 @@
 .projectsproject2container{
     background-color: black;
     
-    border-radius: 10px;
+    border-radius: 1px;
     overflow: hidden;
     width: 98%;
     color: white;
