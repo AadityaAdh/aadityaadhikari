@@ -97,9 +97,9 @@ export default function Projects() {
                                     </div>
                                     <br />
                                     <div className='projects_buttons'>
-                                        <button className='projectsreact'><span><FaReact /></span>PHP</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsnode'><span><IoLogoNodejs /></span>JS</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsexpress'><span><FaJs /></span>MySQL</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button className='projectsreact'><span><FaReact /></span>PHP</button>
+                                        <button className='projectsnode'><span><IoLogoNodejs /></span>JS</button>
+                                        <button className='projectsexpress'><span><FaJs /></span>MySQL</button>
                                         <button className='projectsmongo'><span><SiMongodb /></span>HTML</button>
                                     </div>
                                     <br/>
@@ -138,9 +138,9 @@ export default function Projects() {
                                     </div>
                                     <br />
                                     <div className='projects_buttons'>
-                                        <button className='projectspython'><span><FaPython /></span>Python</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectstensorflow'><span><SiTensorflow /></span>Tensorflow</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button className='projectspython'><span><FaPython /></span>Python</button>
+                                        <button className='projectstensorflow'><span><SiTensorflow /></span>Tensorflow</button>
+                                        <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>
                                         <button className='projectsmongo'><span><SiMongodb /></span>Mongo DB</button>
                                     </div>
                                     <br/>
@@ -176,12 +176,13 @@ export default function Projects() {
                                     </div>
                                     <br />
                                     <div className='projects_buttons'>
-                                        <button className='projectspython'><span><FaPython /></span>Python</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectstensorflow'><span><SiTensorflow /></span>Tensorflow</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button className='projectspython'><span><FaPython /></span>Python</button>
+                                        <button className='projectstensorflow'><span><SiTensorflow /></span>Tensorflow</button>
+                                        <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>
                                         <button className='projectsmongo'><span><SiMongodb /></span>Mongo DB</button>
                                     </div>
                                     <br/>
+
 
                                     <hr  />
                                     <br />
