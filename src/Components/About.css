@@ -63,6 +63,7 @@
     
 }
 
+
 .tooltiptext{
     position: absolute;
     bottom: 12%;
@@ -104,4 +105,16 @@
 
 .displayclassflex{
     display: flex;
+}
+
+@media(max-width:1000px){
+    .about_description{
+        font-size: 10px;
+    }
+    .aboutrightitemscontainer img{
+        height: 100%;
+        width: 100%;
+        border-radius: 80%;
+     
+    }
 }

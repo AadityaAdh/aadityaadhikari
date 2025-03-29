@@ -120,9 +120,9 @@
 
 
 
-@media(max-width:800px){
+@media(max-width:1000px){
     .hero_buttons{
-        width: 90%;
+        width: 100%;
     }
 
 

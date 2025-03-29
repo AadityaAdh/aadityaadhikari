@@ -28,8 +28,8 @@ export default function Ending() {
 
 
 
-        <p className='ending_developed'>Developed by Aaditya Adhikari</p>
-        <p className='ending_developed'>Built with <span className='ending_green'>React.js</span> & <span className='ending_green'>Express.js</span>.Hosted on <span className='ending_green'>Netlify</span> and <span className='ending_green'>Render</span></p>
+        <p className='ending_developed'>Developed by Aaditya Adhikari<br></br>Built with <span className='ending_green'>React.js</span> & <span className='ending_green'>Express.js</span>.Hosted on <span className='ending_green'>Netlify</span> and <span className='ending_green'>Render</span></p>
+        
       
     </div>
   )

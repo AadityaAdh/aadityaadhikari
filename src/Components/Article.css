@@ -59,3 +59,13 @@
 .article_data{
     color: #3CCF91;
 }
+
+@media(max-width:1000px){
+    .article_latest,.article_element_title,.article_view{
+        font-size: 0.875rem;
+    }
+    .article_time{
+        font-size: 0.6rem;
+    }
+
+}
