@@ -11,15 +11,54 @@
 .endingbuttoncontainer{
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
 }
 
-.endingbuttoncontainer button{
+.endingbuttoncontainer a{
     text-decoration: none;
     color: white;
-    height: 5vh;
-    width: 10vw;
-    background-color: rgb(58, 58, 58);
+    height: 2.5rem;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.08);
     border: none;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+.endingbuttoncontainer a:hover{
+    background-color: rgb(41, 41, 41);
+}
+.ending_logos{
+    color: #3CCF91;
+}
+
+
+.ending_keep{
+    font-size: 3rem;
+}
+
+.ending_specalize{
+    font-size: 1rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: rgb(143, 144, 148);
+    text-align: center;
+    
+}
+
+.ending_developed{
+    font-size: 0.875rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+.ending_green{
+    color: #3CCF91;
 }
 

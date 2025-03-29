@@ -70,6 +70,17 @@
     z-index: 1;
     background-color: aquamarine;
 }
+.about_aboutme{
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.about_description{
+    font-size: 16px;
+    color: rgb(143, 144, 148);
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    
+}
 
 
 .bottomtotopanimationclass{

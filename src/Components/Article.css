@@ -22,9 +22,40 @@
 
 .articleitemscontainer{
     color: white;
-    background-color: grey;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
+}
+
+.article_latest{
+    font-size: 1.5rem;
+    font-family: "Ubuntu";
+    font-weight: 700;
+}
+
+.article_view{
+    font-size: 1rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #3CCF91;
+}
+
+.article_element_title{
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+.article_time{
+    color: rgb(143,144,148);
+    font-size: 0.875rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    
+    
+}
+
+.article_data{
+    color: #3CCF91;
 }

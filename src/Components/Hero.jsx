@@ -8,16 +8,17 @@ export default function Hero() {
   return (
     <div className='herocontainer'>
         <div className="heroitemscontainer">
-            <p className='heroheythere'>Hey There I'm </p>
+            <p className='heroheythere'>Hey There I'm- </p>
             <h1 className='heromyname'>Aaditya Adhikari.</h1>
             <p className='herowho'><span className='herocomputerengineer'>Computer Engineer.</span>A self-taught developer with an<br/> interest in Computer Science</p>
+            <br></br><br></br>
             <p className='herospecalize'>🚀Currently Specalizing In Data Engineering</p>
-            <p className='herostatus'>⚡ Intern at GrowByData</p>
-            <br/>
+            <p className='herostatus'>⚡ Intern at <span className='hero_green'>GrowByData</span></p>
+            <br/><br></br>
             <div className='hero_buttons'>
-            <button href='#' className='herobuttons'><span className='heroicons'><FaGithub /></span>Github</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button href='#' className='herobuttons'><span className='heroicons'><FaLinkedin /></span>LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button href='#' className='herobuttons'><span className='heroicons'><MdEmail /></span>Email</button>
+            <button href='#' className='herobuttons'><span className='heroicons'><FaGithub /></span>&nbsp; Github</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button href='#' className='herobuttons'><span className='heroicons'><FaLinkedin /></span>&nbsp; LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button href='#' className='herobuttons'><span className='heroicons'><MdEmail /></span>&nbsp; Email</button>
             </div>
 
             

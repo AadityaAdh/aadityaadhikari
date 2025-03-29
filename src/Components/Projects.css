@@ -71,18 +71,40 @@
 
 
 
+.all_creatuve_works{
+    font-size: 1.5rem;
+    font-family: "Ubuntu";
+    font-weight: 700;
 
+}
+.projects_here_some{
+    font-size: 1.25rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: rgb(143, 144, 148);
+}
+
+.projects_explore_more{
+    font-size: 1.25rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #3CCF91;
+}
 
 
 .projectsproject1container{
     
     width: 98%;
     overflow: hidden;
-    background-color: rgb(24, 24, 23);
-    border: 1px solid grey;
+    background-color: black;
+    
     border-radius: 10px;
     color: white;
 
+}
+
+.projects_hr{
+    height: 0.3px;
+    border: none;
+    background-color: white;
 }
 
 .projectsproject1container img{
@@ -107,6 +129,8 @@
 }
 .projectsprojectname{
     color: white;
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
 }
 .project_descriptions{
     width: 100%;
@@ -121,20 +145,27 @@
 
 }
 .projects_buttons{
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
     display: flex;
     
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    height: 7vh;
+    min-height: 1.5rem;
+    
+    
 }
 .projects_buttons button{
     
-        height: 80%;
-        width: 24%;
+        height: 1.5rem;
+        width: 5.9rem;
+        
         border-radius: 10px;
         border: none;
         color: white;
-        font-size: 15px;
+        
     
     
 }
@@ -142,6 +173,12 @@
 
 .ninetyfivewidth{
     width: 95%;
+}
+
+.projects_descriptionss{
+    font-size: 1rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: rgb(143, 144, 148);
 }
 
 
@@ -178,7 +215,7 @@
 }
 
 .projectsproject2container{
-    background-color: rgb(31, 31, 30);
+    background-color: black;
     
     border-radius: 10px;
     overflow: hidden;

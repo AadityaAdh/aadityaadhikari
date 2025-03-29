@@ -40,8 +40,9 @@ export default function Projects() {
     }, [])
     return (
         <div className='projectscontainer'>
+
             <div className="projectsleftitemscontainer">
-                <p><strong>All Creative Works</strong><br />Here's some of my projects that I have worked on.<br />Explore more<IoIosArrowRoundForward /></p>
+                <p><span className='all_creatuve_works'>All Creative Works</span><br /><span className='projects_here_some'>Here's some of my projects that I have worked on</span>.<br /><span className='projects_explore_more'>Explore more →</span></p>
                 <div className='projectsproject1'>
                     <Tilt options={defaultOptions} className='border'>
                         <div className="projectsproject1container">
@@ -60,13 +61,13 @@ export default function Projects() {
                                         <button className='projectsexpress'><span><FaJs /></span>Express</button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <button className='projectsmongo'><span><SiMongodb /></span> Mongo</button>
                                     </div>
+                                    <br/>
 
-                                    <hr />
+                                    <hr  />
                                     <br />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                                        repudiandae exercitationem dignissimos iste esse rerum sunt fugiat
-                                        mollitia eum distinctio nesciunt debitis itaque aperiam tempore accusantium,
-                                        provident expedita unde modi!</p>
+                                    <p className='projects_descriptionss'>
+                                    An e-commerce website for seamless shopping and management of detergent products.
+                                    </p>
 
                                         <br></br>
 
@@ -101,13 +102,12 @@ export default function Projects() {
                                         <button className='projectsexpress'><span><FaJs /></span>MySQL</button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <button className='projectsmongo'><span><SiMongodb /></span>HTML</button>
                                     </div>
+                                    <br/>
 
-                                    <hr />
+                                    <hr  />
                                     <br />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                         Assumenda, repudiandae exercitationem dignissimos iste esse
-                                          rerum sunt fugiat mollitia eum distinctio nesciunt debitis
-                                           itaque aperiam tempore accusantium, provident expedita unde modi!
+                                    <p className='projects_descriptionss'>
+                                    An efficient system for booking and managing airline reservations.
                                     </p>
                                     <br></br>
                                 </div>
@@ -133,7 +133,7 @@ export default function Projects() {
                             <div className='project_descriptions'>
                                 <div className='ninetyfivewidth'>
                                     <div className='projectsnameandlink'>
-                                        <h2 className='projectsprojectname'>Automated Attendence using Facial Recognition</h2>
+                                        <h2 className='projectsprojectname'>Face Recognition System</h2>
                                         <p className='projectsexternallink'><FaExternalLinkAlt /></p>
                                     </div>
                                     <br />
@@ -143,14 +143,14 @@ export default function Projects() {
                                         <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <button className='projectsmongo'><span><SiMongodb /></span>Mongo DB</button>
                                     </div>
+                                    <br/>
 
-                                    <hr />
+                                    <hr  />
                                     <br />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                         Assumenda, repudiandae exercitationem dignissimos iste esse 
-                                         rerum sunt fugiat mollitia eum distinctio nesciunt debitis itaque
-                                          aperiam tempore accusantium, provident expedita unde modi!
-                                          </p>
+                                    <p className='projects_descriptionss'>
+                                    A Face Recognition System that accurately identifies individuals
+                                     for secure authentication and attendance management
+                                    </p>
 
                                     <br></br>
                                 </div>
@@ -181,13 +181,13 @@ export default function Projects() {
                                         <button className='projectsopencv'><span><SiOpencv /></span>Open CV</button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <button className='projectsmongo'><span><SiMongodb /></span>Mongo DB</button>
                                     </div>
+                                    <br/>
 
-                                    <hr />
+                                    <hr  />
                                     <br />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Assumenda, repudiandae exercitationem dignissimos iste esse rerum
-                                        sunt fugiat mollitia eum distinctio nesciunt debitis itaque aperiam
-                                        tempore accusantium, provident expedita unde modi!
+                                    <p className='projects_descriptionss'>
+                                    A system for recognizing and generating traffic signs using GANs for
+                                     accurate detection and realistic sign generation.
                                     </p>
                                     <br></br>
                                 </div>

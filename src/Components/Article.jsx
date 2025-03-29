@@ -5,7 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 export default function Article() {
 
   const data=[{
-    Title:"Mern website using mern stack",
+    Title:"Prativa Chemicals",
     date:"April 2 2024",
     timeofread:"2 min"
   },
@@ -15,7 +15,7 @@ export default function Article() {
     timeofread:"2 min"
   },
   {
-    Title:"Automated Attendence",
+    Title:"Airline Reservation System",
     date:"April 2 2024",
     timeofread:"2 min"
   },
@@ -33,8 +33,8 @@ export default function Article() {
   return (
     <div className='articlecontainer'>
       <div className="articletopcontainer">
-        <h1>📰 Latest Article</h1>
-        <p>View all articles<IoIosArrowRoundForward /></p>
+        <h2 className='article_latest'>📰 Latest Article</h2>
+        <p className='article_view'>View all articles →</p>
         
       </div>
       <div className="articlebottomcontainer">
@@ -42,8 +42,8 @@ export default function Article() {
         i<=3?
         (
           <div className='articleitemscontainer' key={i}>
-            <h2>{element.Title}</h2>
-            <p>{element.date}&nbsp;.&nbsp;{element.timeofread} read</p>
+            <p className='article_element_title'>{element.Title}</p>
+            <p className='article_time'>{element.date}&nbsp;.&nbsp;{element.timeofread} read</p>
           </div>
           
         ):null
@@ -58,3 +58,4 @@ export default function Article() {
     </div>
   )
 }
+
