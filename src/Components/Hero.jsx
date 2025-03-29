@@ -12,7 +12,7 @@ export default function Hero() {
             <h1 className='heromyname'>Aaditya Adhikari.</h1>
             <p className='herowho'><span className='herocomputerengineer'>Computer Engineer.</span>A self-taught developer with an<br/> interest in Computer Science</p>
             <br></br><br></br>
-            <p className='herospecalize'>🚀Currently Specalizing In Data Engineering</p>
+            <p className='herospecalize'>🚀 Currently Specalizing In Data Engineering</p>
             <p className='herostatus'>⚡ Intern at <span className='hero_green'>GrowByData</span></p>
             <br/><br></br>
             <div className='hero_buttons'>

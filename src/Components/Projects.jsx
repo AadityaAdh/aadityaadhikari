@@ -56,9 +56,9 @@ export default function Projects() {
                                     <br />
                                     <div className='projects_buttons'>
 
-                                        <button className='projectsreact'><span><FaReact /></span> React</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsnode'><span><IoLogoNodejs /></span> Node.js</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <button className='projectsexpress'><span><FaJs /></span>Express</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button className='projectsreact'><span><FaReact /></span> React</button>
+                                        <button className='projectsnode'><span><IoLogoNodejs /></span> Node.js</button>
+                                        <button className='projectsexpress'><span><FaJs /></span>Express</button>
                                         <button className='projectsmongo'><span><SiMongodb /></span> Mongo</button>
                                     </div>
                                     <br/>
@@ -167,7 +167,7 @@ export default function Projects() {
 
                     <Tilt options={defaultOptions} className='border'>
                         <div className="projectsproject2container">
-                            <img src='TrafficSign generation.webp'></img>
+                            <img src='trafficsigngeneration.jpg'></img>
                             <div className='project_descriptions'>
                                 <div className='ninetyfivewidth'>
                                     <div className='projectsnameandlink'>
