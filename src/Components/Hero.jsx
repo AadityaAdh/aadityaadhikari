@@ -5,6 +5,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Hero() {
+
+  const openLink = (url) => {
+    window.location.href = url;
+  };
   return (
     <div className='herocontainer'>
         <div className="heroitemscontainer">
@@ -16,9 +20,19 @@ export default function Hero() {
             <p className='herostatus'>⚡ Intern at <span className='hero_green'>GrowByData</span></p>
             <br/><br></br>
             <div className='hero_buttons'>
-            <button href='#' className='herobuttons'><span className='heroicons'><FaGithub /></span>&nbsp; Github</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button href='#' className='herobuttons'><span className='heroicons'><FaLinkedin /></span>&nbsp; LinkedIn</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button href='#' className='herobuttons'><span className='heroicons'><MdEmail /></span>&nbsp; Email</button>
+
+            <button onClick={() => openLink("https://github.com/AadityaAdh")} className="herobuttons">
+        <span className="heroicons"><FaGithub /></span>&nbsp; Github
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button onClick={() => openLink("https://www.linkedin.com/in/aaditya-adhikari-b82ba028b/")} className="herobuttons">
+        <span className="heroicons"><FaLinkedin /></span>&nbsp; LinkedIn
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button onClick={() => openLink("mailto:aaditya.adh@gmail.com")} className="herobuttons">
+        <span className="heroicons"><MdEmail /></span>&nbsp; Email
+      </button>
+            
             </div>
 
             

@@ -5,7 +5,7 @@ import Allprojects from '../Components/Allprojects'
 
 export default function Projectspage() {
   return (
-    <div>
+    <div className='projectspage_outercontainer'>
         <div className='navbaroutercontainer'>
             <Navbar/>
         </div>

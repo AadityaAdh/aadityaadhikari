@@ -250,6 +250,27 @@
 }
 
 @media(max-width:900px){
+    .projectscontainer{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+    .projectsleftitemscontainer{
+        width: 100%;
+    }
+
+    .projectsrightitemscontainer{
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
     .all_creatuve_works{
         font-size: 0.875rem;
     }
@@ -269,14 +290,16 @@
         
     }
     .projects_buttons button{
-        min-width: 2rem;
+        min-width: 5rem;
         height: 100%;
         border-radius: 5px;
-        font-size: 5px;
+        font-size: 7px;
     }
     .projects_descriptionss{
         font-size: 0.6rem;
     }
+
+    
 }
 
 

@@ -63,3 +63,9 @@
     color: #3CCF91;
 }
 
+@media(max-width:900px){
+    .ending_keep{
+        font-size: 2rem;
+    }
+}
+

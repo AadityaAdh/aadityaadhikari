@@ -7,28 +7,44 @@
 
 .viewmyprojectimagecontainer,.viewmyprojectimagecontainer img{
     width: 100%;
-    height: 10vh;
+    height: 70vh;
     overflow: hidden;
 }
 
 .viewmyprojecttitlecontainer{
     border-bottom: 0.1px solid grey;
 }
-
-.viewmyprojectbottomleftitemscontainer h1{
-    border-left: 5px solid rgb(51, 126, 126);
+.viewmyprojecttitlecontainer h1{
+    font-size: 3rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    
 }
+.viewmyprojecttitlecontainer p{
+    font-size: 0.875rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+.viewmyprojecttitlecontainer a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
 
 .viewmyprojectbottomcontainer{
     display: flex;
     width: 100%;
     height: 80%;
+    gap: 10px;
 }
 .viewmyprojectbottomleftcontainer{
-    width: 80%;
+    width: 78%;
 }
 .viewmyprojectbottomrightcontainer{
-    width: 20%;
+    width: 18%;
     position: sticky;
     top: 0;
     left: 0;
@@ -36,9 +52,39 @@
     height: 60vh;
 }
 
-.viewmyprojectbottomrightcontainer h2:hover{
+.viewmyprojects_table{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.viewprojects_table_keys{
+    color: rgb(143,144,148);
+
+}
+
+.viewprojects_table_keys:hover{
 
     cursor:pointer;
     color: red;
+
+}
+
+.viewproject_heading{
+    border-left: 5px solid rgb(51, 126, 126);
+    font-size: 1.75em;
+    font-weight: 700;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+.viewproject_element_description{
+    color: #fefefe;
+    font-size: 17px;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+@media(max-width:900px){
+    
 
 }

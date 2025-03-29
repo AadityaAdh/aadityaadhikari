@@ -9,6 +9,7 @@
     color: white;
 }
 
+
 .allprojectssearchcontainer{
     display: flex;
     align-items: center;
@@ -42,30 +43,99 @@
 
 .allprojectsupcontainer{
     
-    border-bottom: 0.1px solid grey;
+    
     width: 100%;
 }
 
 .allprojectsdowncontainer{
     display: grid;
     width: 100%;
-    gap: 2px;
-    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+    row-gap: 90px;
+    grid-template-columns: 45% 45%;
+    border: none;
+    overflow: hidden;
 }
 
 .allprojectsprojectcard img{
-    height: 10px;
+    height: 250px;
     width: 100%;
 }
 .allprojectsprojectcard{
-    background-color: grey;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 0.000001px solid grey;
+
 
 }
 
 .allprojectsprojectcardtextsection{
     width: 95%;
+}
+
+.allprojectsprojecttitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+}
+
+.allprojectstools{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.allprojectsprojects{
+    font-size: 3.75rem;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.allprojectsilove{
+    font-size: 16px;
+}
+
+.allprojectstools button{
+    min-width: 5rem;
+    min-height: 2rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.allprojectsdescription{
+    font-size: 1rem;
+    color: rgb(143,144,148);
+    font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+}
+
+
+.allprojectsprojectcard:hover{
+    cursor: pointer;
+}
+
+.icon-react { background-color: #61DBFB; color: white; }  /* React - Light Blue */
+.icon-node { background-color: #3C873A; color: white; }  /* Node.js - Green */
+.icon-express { background-color: #444; color: white; }  /* Express.js - Dark Gray */
+.icon-mongo { background-color: #4DB33D; color: white; }  /* MongoDB - Green */
+.icon-tensorflow { background-color: #FF6F00; color: white; }  /* TensorFlow - Orange */
+.icon-python { background-color: #3776AB; color: white; }  /* Python - Blue */
+.icon-opencv { background-color: #5C3EE8; color: white; }  /* OpenCV - Purple */
+.icon-mysql { background-color: #00758F; color: white; }  /* MySQL - Blue */
+.icon-php { background-color: #777BB4; color: white; }  /* PHP - Purple */
+
+
+
+@media(max-width:900px){
+    .allprojectsdowncontainer{
+        display: flex;
+        flex-direction: column;
+    }
 }
