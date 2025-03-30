@@ -10,6 +10,7 @@ export default function Navbar() {
     function handlemenubutton(actionstodo){
         let mobilecontainer=document.querySelector(".mobilemenucontainer");
         if (actionstodo=="show"){
+            window.scrollTo(0,0)
             mobilecontainer.style.display="flex";
 
         }
@@ -31,6 +32,9 @@ export default function Navbar() {
     }
 
     function handlehome(){
+        let mobilecontainer=document.querySelector(".mobilemenucontainer");
+        mobilecontainer.style.display="none";
+        
         navigate('/')
         
     }
@@ -77,13 +81,13 @@ export default function Navbar() {
 
         <div className="mobilemenucontainer" onClick={handleoutsideclick}>
             <div className="mobilemenuitemscontainer">
-            <p onClick={()=>handlemenubutton("hide")}><RxCross2 /></p>
-            <button className="mobilenavbarbuttons">Home</button>
-            <button className="mobilenavbarbuttons">Projects</button>
-            <button className="mobilenavbarbuttons">Blog</button>
-            <button className="mobilenavbarbuttons">About</button>
-            <button className="mobilenavbarbuttons">Servics</button>
-            <button className="mobilenavbarbuttons">Contact</button>
+            <p onClick={handlehome}><RxCross2 /></p>
+            <button className="mobilenavbarbuttons" onClick={handlehome}>Home</button>
+            <button className="mobilenavbarbuttons" onClick={handleprojects}>Projects</button>
+            <button className="mobilenavbarbuttons" onClick={handleblog}>Blog</button>
+            <button className="mobilenavbarbuttons" onClick={handleabout}>About</button>
+            <button className="mobilenavbarbuttons" onClick={handleservices}>Servics</button>
+            <button className="mobilenavbarbuttons" onClick={handlecontact}>Contact</button>
 
             </div>
             

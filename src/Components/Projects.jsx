@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Projects.css'
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 
 export default function Projects() {
+    
     const defaultOptions = {
         reverse: false,  // reverse the tilt direction
         max: 35,     // max tilt rotation (degrees)
@@ -38,12 +39,19 @@ export default function Projects() {
 
         }
     }, [])
+
+    
+
+
+    
+
+
     return (
         <div className='projectscontainer'>
 
             <div className="projectsleftitemscontainer">
                 <p><span className='all_creatuve_works'>All Creative Works</span><br /><span className='projects_here_some'>Here's some of my projects that I have worked on</span>.<br /><span className='projects_explore_more'>Explore more →</span></p>
-                <div className='projectsproject1'>
+                <div className='projectsproject1' >
                     <Tilt options={defaultOptions} className='border'>
                         <div className="projectsproject1container">
                             <img src='PrativaChemicals.png'></img>
@@ -85,9 +93,9 @@ export default function Projects() {
 
 
                 </div>
-                <div className='projectsproject1'>
+                <div className='projectsproject1' >
                     <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject1container">
+                        <div className="projectsproject1container" >
                             <img src='Airlinereservation.png'></img>
                             <div className='project_descriptions'>
                                 <div className='ninetyfivewidth'>
@@ -117,6 +125,8 @@ export default function Projects() {
                         </div>
                     </Tilt>
 
+                
+
 
                 </div>
 
@@ -125,7 +135,7 @@ export default function Projects() {
 
             </div>
             <div className="projectsrightitemscontainer">
-                <div className='projectsproject2'>
+                <div className='projectsproject2' >
 
                     <Tilt options={defaultOptions} className='border'>
                         <div className="projectsproject2container">
@@ -163,10 +173,10 @@ export default function Projects() {
 
                 </div>
 
-                <div className='projectsproject2'>
+                <div className='projectsproject2' >
 
                     <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject2container">
+                        <div className="projectsproject2container" >
                             <img src='trafficsigngeneration.jpg'></img>
                             <div className='project_descriptions'>
                                 <div className='ninetyfivewidth'>

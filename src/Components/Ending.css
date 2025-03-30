@@ -67,5 +67,10 @@
     .ending_keep{
         font-size: 2rem;
     }
+
+    .endingbuttoncontainer a{
+        font-size: 0.7rem;
+        gap: 7px;
+    }
 }
 
