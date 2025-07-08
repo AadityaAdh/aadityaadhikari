@@ -148,6 +148,44 @@
 }
 
 
+@media (max-width: 900px) {
+  .viewmyprojectcontents * {
+    all: unset;
+    font-size: 10px !important;
+    
+    color: rgb(150, 150, 150) !important;
+  }
+
+  .viewmyprojectcontents blockquote{
+    color: white !important;
+  }
+
+  .viewmyprojecttableofcontents{
+    font-size: 10px;
+  }
+
+  .viewmyprojecttableelements{
+    font-size: 10px !important;
+  }
+
+  .viewmyprojectsummary{
+    font-size: 10px;
+    color: rgb(150, 150, 150);
+  }
+
+  .viewmyprojecttitle{
+    font-size: 25px !important;
+  }
+
+  .viewmyprojectoutercontainer img{
+    height: 30vh;
+  }
+
+  
+}
+
+
+
 
 
 
