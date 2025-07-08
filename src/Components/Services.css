@@ -193,6 +193,24 @@
 }
 
 
+@media(max-width:900px){
+    .servicesdowncontainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .servicetitle{
+      font-size: 15px;
+    }
+
+    
+    
+
+}
+
+
 
 
 

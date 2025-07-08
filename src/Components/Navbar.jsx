@@ -13,6 +13,7 @@ export default function Navbar() {
         if (actionstodo=="show"){
             window.scrollTo(0,0)
             mobilecontainer.style.display="flex";
+            
 
         }
         else if(actionstodo=="hide"){
@@ -128,13 +129,16 @@ export default function Navbar() {
 
         <div className="mobilemenucontainer" onClick={handleoutsideclick}>
             <div className="mobilemenuitemscontainer">
-            <p onClick={handlehome}><RxCross2 /></p>
+
+            <div className="crossdiv"><p onClick={handlehome}><RxCross2 /></p></div>
             <button className="mobilenavbarbuttons" onClick={handlehome}>Home</button>
             <button className="mobilenavbarbuttons" onClick={handleprojects}>Projects</button>
             <button className="mobilenavbarbuttons" onClick={handleblog}>Blog</button>
             <button className="mobilenavbarbuttons" onClick={handleabout}>About</button>
             <button className="mobilenavbarbuttons" onClick={handleservices}>Servics</button>
             <button className="mobilenavbarbuttons" onClick={handlecontact}>Contact</button>
+            {!tokenverified &&(<button className='mobilenavbarbuttons' onClick={handlelogin}>Login</button>)}
+            {tokenverified &&(<button className='mobilenavbarbuttons' onClick={handlelogout}>Logout</button>)}
 
             </div>
             

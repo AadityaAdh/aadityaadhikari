@@ -109,6 +109,7 @@ export default function Projects() {
 
 
     return (
+        
         <div className='projectscontainer'>
 
             <div className="projectsleftitemscontainer">

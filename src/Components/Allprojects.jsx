@@ -15,7 +15,23 @@ export default function Allprojects() {
     const [searchdata, changesearchdata] = useState('');
     const [isadmin,setisaddmin]=useState(false);
     const [pd,setpd]=useState([]);
-    const navigate = useNavigate();    
+    const navigate = useNavigate();  
+    
+    useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('displayanimation');
+            } 
+        });
+    });
+    const allhereobserver = document.querySelectorAll('.hereobserver');
+    allhereobserver.forEach((el) => observer.observe(el));
+
+    
+
+    
+}, [pd]);
     
     
     
@@ -127,7 +143,7 @@ export default function Allprojects() {
                     {
                         pd.map((element, i) => (
                             element.title.toLowerCase().includes(searchdata.toLowerCase()) ? (
-                                <div className="allprojectsprojectcard" key={i} onClick={() => handleviewmyprojectcard(element._id)}>
+                                <div className="allprojectsprojectcard hereobserver" key={i} onClick={() => handleviewmyprojectcard(element._id)}>
                                     <img src={`https://aadityaadhbackend.onrender.com/${element.image}`}></img>
                                     <br></br>
                                     <div className='allprojectsprojectcardtextsection'>

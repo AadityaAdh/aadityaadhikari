@@ -20,8 +20,8 @@
     width: 100%;
     min-height: 70vh;
     margin: 0 auto;
-    background-color: #011522;
-    /* background-color: #368cc1; */
+    /* background-color: #011522; */
+    background-color: #368cc1;
     /* background-color: rgb(0, 67, 192); */
     border-radius: 8px;
     z-index: 1;
@@ -106,4 +106,19 @@
 .centerendingaboutmeending img {
     height: 90%;
     width: 40px;
+}
+
+
+@media(max-width:900px){
+    .centerendingaboutmeending{
+        width: 50%;
+    }
+
+    .codequestion{
+        font-size: 15px;
+    }
+    .codeanswer{
+        font-size: 10px;
+        text-align: justify;
+    }
 }

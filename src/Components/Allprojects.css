@@ -60,7 +60,8 @@
 
 
     
-    width: 1.5vw;
+    /* width: 1.5vw; */
+    width: 10%;
     display: flex;
     align-items: center;
     /* border-top-right-radius: 10px;
@@ -213,4 +214,12 @@
         
         
     }
+
+    .allprojectsprojectcard{
+        width: 100%;
+    }
+
+    
+    
+
 }

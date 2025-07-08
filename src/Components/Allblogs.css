@@ -64,3 +64,24 @@
 .bloggap{
     height: 1px;
 }
+
+
+
+
+@media(max-width:900px){
+    .blogssummary{
+        font-size: 10px;
+    }
+
+    .blogslm{
+        font-size: 10px;
+    }
+
+    .datetimecontainer{
+        font-size: 10px;
+    }
+
+    
+    
+
+}
