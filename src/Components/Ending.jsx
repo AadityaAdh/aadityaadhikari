@@ -32,8 +32,8 @@ export default function Ending() {
         <br></br><br></br>
         <div className="endingbuttoncontainer">
         <a href='https://www.linkedin.com/in/aaditya-adhikari-b82ba028b/' target='_blank' className='linkedinbuttons hereobserver'>&nbsp; &nbsp;<span className='ending_logos'><FaLinkedin /></span>&nbsp; LinkedIn&nbsp; &nbsp;</a>
-        <a href='mailto:aaditya.adh@gmail.com' target='_blank'>&nbsp; &nbsp;<span className='ending_logos hereobserver'><MdEmail /></span>&nbsp; Email&nbsp; &nbsp;</a>
-        <a href='/AadityaAdhikari.pdf' target="_blank">&nbsp; &nbsp;<span className='ending_logos hereobserver'><IoDocumentText /></span>&nbsp; Resume&nbsp; &nbsp;</a>
+        <a href='mailto:aaditya.adh@gmail.com' target='_blank' className='hereobserver'>&nbsp; &nbsp;<span className='ending_logos'><MdEmail /></span>&nbsp; Email&nbsp; &nbsp;</a>
+        <a href='/AadityaAdhikari.pdf' target="_blank" className='hereobserver'>&nbsp; &nbsp;<span className='ending_logos'><IoDocumentText /></span>&nbsp; Resume&nbsp; &nbsp;</a>
 
         </div>
 
@@ -44,7 +44,7 @@ export default function Ending() {
 
 
 
-        <p className='ending_developed'>Developed by Aaditya Adhikari<br></br>Built with <span className='ending_green'>React.js</span> & <span className='ending_green'>Express.js</span>.Hosted on <span className='ending_green'>Netlify</span> and <span className='ending_green'>Render</span></p>
+        <p className='ending_developed hereobserver'>Developed by Aaditya Adhikari<br></br>Built with <span className='ending_green'>React.js</span> & <span className='ending_green'>Express.js</span>.Hosted on <span className='ending_green'>Netlify</span> and <span className='ending_green'>Render</span></p>
         
       
     </div>

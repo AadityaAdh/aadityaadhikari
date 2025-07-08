@@ -103,7 +103,11 @@ export default function Navbar() {
 
         if (response.ok){
             settokenverified(false)
+            console.log("Sucessfully logged out")
             navigate('/')
+        }
+        else{
+            console.log("Could not logout response not okay check network tab")
         }
         
     }
