@@ -71,7 +71,7 @@ export default function Navbar() {
         async function getprofile(){
         try{
         
-        const response = await fetch(`http://localhost:4005/profile`, {
+        const response = await fetch(`https://aadityaadhbackend.onrender.com/profile`, {
                     method: "GET",
                     credentials: 'include'
                 });
@@ -95,7 +95,7 @@ export default function Navbar() {
     },[])
 
     async function handlelogout() {
-        const response = await fetch(`http://localhost:4005/logout`, {
+        const response = await fetch(`https://aadityaadhbackend.onrender.com/logout`, {
                     method: "POST",
                     credentials: 'include'
                 });

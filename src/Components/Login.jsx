@@ -16,11 +16,12 @@ export default function Login() {
 
 
       try {
-                const response = await fetch(`http://localhost:4005/posts/getUser?uniqueid=${myname}&password=${mypass}`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/posts/getUser?uniqueid=${myname}&password=${mypass}`, {
                     method: "GET",
                     credentials: 'include'
                 });
                 if (response.ok) {
+                  alert("Sucessful")
                     navigate('/')
                 } else {
                     alert("only aaditya is allowed to login")

@@ -44,7 +44,7 @@ export default function Writeblog() {
 
     //natra ta json nai pathauda ni vai halxa ni
 
-    const response = await fetch(`http://localhost:4005/blogs/new`, {
+    const response = await fetch(`https://aadityaadhbackend.onrender.com/blogs/new`, {
                     method: "POST",
                     body:data
                 });

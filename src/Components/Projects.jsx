@@ -63,7 +63,7 @@ export default function Projects() {
         async function getposts() {
             try {
 
-                const response = await fetch(`http://localhost:4005/posts`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/posts`, {
                     method: "GET",
 
                 });
@@ -115,7 +115,7 @@ export default function Projects() {
                 <p><span className='all_creatuve_works'>All Creative Works</span><br /><span className='projects_here_some'>Here's some of my projects that I have worked on</span>.<br /><span className='projects_explore_more'>Explore more →</span></p>
                 <div onClick={()=>handleclick(pd[0]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`http://localhost:4005/${pd[0].image}`}></img>
+                    <img src={`https://aadityaadhbackend.onrender.com/${pd[0].image}`}></img>
                     <div className="projectcontentssection">
                         <div className="projecttitleandnavbarcontainer">
                             <h1>{pd[0].title}</h1>
@@ -144,7 +144,7 @@ export default function Projects() {
 
                 <div onClick={()=>handleclick(pd[1]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`http://localhost:4005/${pd[1].image}`}></img>
+                    <img src={`https://aadityaadhbackend.onrender.com/${pd[1].image}`}></img>
                     <div className="projectcontentssection">
                         <div className="projecttitleandnavbarcontainer">
                             <h1>{pd[1].title}</h1>
@@ -180,7 +180,7 @@ export default function Projects() {
             <div className="projectsrightitemscontainer">
                 <div onClick={()=>handleclick(pd[2]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`http://localhost:4005/${pd[2].image}`}></img>
+                    <img src={`https://aadityaadhbackend.onrender.com/${pd[2].image}`}></img>
                     <div className="projectcontentssection">
                         <div className="projecttitleandnavbarcontainer">
                             <h1>{pd[2].title}</h1>
@@ -209,7 +209,7 @@ export default function Projects() {
 
                 <div onClick={()=>handleclick(pd[3]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`http://localhost:4005/${pd[3].image}`}></img>
+                    <img src={`https://aadityaadhbackend.onrender.com/${pd[3].image}`}></img>
                     <div className="projectcontentssection">
                         <div className="projecttitleandnavbarcontainer">
                             <h1>{pd[3].title}</h1>

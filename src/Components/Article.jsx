@@ -15,7 +15,7 @@ export default function Article() {
             console.log("hit here")
                 try{
                 
-                const response = await fetch(`http://localhost:4005/blogs`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/blogs`, {
                             method: "GET",
                             
                         });

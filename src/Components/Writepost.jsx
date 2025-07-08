@@ -53,7 +53,7 @@ export default function Writepost() {
 
     //natra ta json nai pathauda ni vai halxa ni
 
-    const response = await fetch(`http://localhost:4005/posts/new`, {
+    const response = await fetch(`https://aadityaadhbackend.onrender.com/posts/new`, {
       method: "POST",
       body: data
     });

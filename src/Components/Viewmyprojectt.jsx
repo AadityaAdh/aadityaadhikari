@@ -19,7 +19,7 @@ export default function Viewmyprojectt() {
             async function getprofile(){
             try{
             
-            const response = await fetch(`http://localhost:4005/profile`, {
+            const response = await fetch(`https://aadityaadhbackend.onrender.com/profile`, {
                         method: "GET",
                         credentials: 'include'
                     });
@@ -115,7 +115,7 @@ export default function Viewmyprojectt() {
     async function getSinglePosts(){
                 try{
                 
-                const response = await fetch(`http://localhost:4005/posts/getPost/${id}`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/posts/getPost/${id}`, {
                             method: "GET",
                             
                         });
@@ -195,7 +195,7 @@ export default function Viewmyprojectt() {
 
 
   async function handledelete(id){
-    const response = await fetch(`http://localhost:4005/posts/deletePost/${id}`, {
+    const response = await fetch(`https://aadityaadhbackend.onrender.com/posts/deletePost/${id}`, {
                             method: "DELETE",
                             
                         });
@@ -218,7 +218,7 @@ export default function Viewmyprojectt() {
     <div className='viewmyprojectoutercontainer'>
       {data ? (
         <div>
-        <img src={`http://localhost:4005/${data.image}`}></img>
+        <img src={`https://aadityaadhbackend.onrender.com/${data.image}`}></img>
         <h1 className='viewmyprojecttitle'>{data.title} 🔗</h1>
         
         <p className='viewmyprojectsummary'>{data.summary}</p>

@@ -49,7 +49,7 @@ export default function Updateblog() {
 
     //natra ta json nai pathauda ni vai halxa ni
 
-    const response = await fetch(`http://localhost:4005/blogs/update/${id}`, {
+    const response = await fetch(`https://aadityaadhbackend.onrender.com/blogs/update/${id}`, {
                     method: "PUT",
                     body:data
                 });
@@ -69,7 +69,7 @@ export default function Updateblog() {
     //get that project data from that id
     async function getsingleproject() {
       try{
-      const response = await fetch(`http://localhost:4005/blogs/getBlog/${id}`, {
+      const response = await fetch(`https://aadityaadhbackend.onrender.com/blogs/getBlog/${id}`, {
                             method: "GET",
                             
       });

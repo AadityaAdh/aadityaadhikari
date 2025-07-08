@@ -14,7 +14,7 @@ export default function Writeblogspage() {
             async function getprofile(){
             try{
             
-            const response = await fetch(`http://localhost:4005/profile`, {
+            const response = await fetch(`https://aadityaadhbackend.onrender.com/profile`, {
                         method: "GET",
                         credentials: 'include'
                     });

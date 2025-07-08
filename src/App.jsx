@@ -1,10 +1,8 @@
-import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './Pages/Homepage';
 import Projectspage from './Pages/Projectspage';
 import Loginpage from './Pages/Loginpage';
-import Adminpostspage from './Pages/Adminpostspage';
 import Viewmyprojectpage from './Pages/Viewmyprojectpage';
 import Writepostpage from './Pages/Writepostpage';
 import Adminupdatepostpage from './Pages/Adminupdatepostpage';
@@ -24,7 +22,6 @@ function App() {
           <Route path='/' element={<Homepage/>} />
           <Route path='/projects' element={<Projectspage />} />
           <Route path='/login' element={<Loginpage />} />
-          <Route path='/adminposts' element={<Adminpostspage/>}/>
           <Route path='/viewmyproject/:id' element={<Viewmyprojectpage/>}/>
           <Route path='/writepost' element={<Writepostpage/>}/>
           <Route path='/adminupdatepost/:id' element={<Adminupdatepostpage/>}/>

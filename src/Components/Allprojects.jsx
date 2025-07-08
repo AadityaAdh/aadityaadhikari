@@ -23,7 +23,7 @@ export default function Allprojects() {
                 async function getprofile(){
                 try{
                 
-                const response = await fetch(`http://localhost:4005/profile`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/profile`, {
                             method: "GET",
                             credentials: 'include'
                         });
@@ -48,7 +48,7 @@ export default function Allprojects() {
         async function getposts(){
                 try{
                 
-                const response = await fetch(`http://localhost:4005/posts`, {
+                const response = await fetch(`https://aadityaadhbackend.onrender.com/posts`, {
                             method: "GET",
                             
                         });
@@ -128,7 +128,7 @@ export default function Allprojects() {
                         pd.map((element, i) => (
                             element.title.toLowerCase().includes(searchdata.toLowerCase()) ? (
                                 <div className="allprojectsprojectcard" key={i} onClick={() => handleviewmyprojectcard(element._id)}>
-                                    <img src={`http://localhost:4005/${element.image}`}></img>
+                                    <img src={`https://aadityaadhbackend.onrender.com/${element.image}`}></img>
                                     <br></br>
                                     <div className='allprojectsprojectcardtextsection'>
                                         <div className='allprojectsprojecttitle'>

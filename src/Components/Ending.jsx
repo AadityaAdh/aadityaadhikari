@@ -17,7 +17,7 @@ export default function Ending() {
         <div className="endingbuttoncontainer">
         <a href='https://www.linkedin.com/in/aaditya-adhikari-b82ba028b/' target='_blank' className='linkedinbuttons'>&nbsp; &nbsp;<span className='ending_logos'><FaLinkedin /></span>&nbsp; LinkedIn&nbsp; &nbsp;</a>
         <a href='mailto:aaditya.adh@gmail.com' target='_blank'>&nbsp; &nbsp;<span className='ending_logos'><MdEmail /></span>&nbsp; Email&nbsp; &nbsp;</a>
-        <a href='/AadityaAdh.pdf' target="_blank">&nbsp; &nbsp;<span className='ending_logos'><IoDocumentText /></span>&nbsp; Resume&nbsp; &nbsp;</a>
+        <a href='/AadityaAdhikari.pdf' target="_blank">&nbsp; &nbsp;<span className='ending_logos'><IoDocumentText /></span>&nbsp; Resume&nbsp; &nbsp;</a>
 
         </div>
 
