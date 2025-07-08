@@ -229,7 +229,6 @@ export default function Viewmyprojectt() {
         
         
         <div className='viewmyprojectdowncontainer'>
-          <div className='viewmyprojectcontents' dangerouslySetInnerHTML={{ __html: modifiedHtml || "<p>hello</p> "}}></div>
           <div className='tableofcontentscontainer'>
             <br></br>
             <p className='viewmyprojecttableofcontents'>Table of contents</p>
@@ -247,6 +246,8 @@ export default function Viewmyprojectt() {
               
             
           </div>
+          <div className='viewmyprojectcontents' dangerouslySetInnerHTML={{ __html: modifiedHtml || "<p>hello</p> "}}></div>
+          
 
         </div>
         

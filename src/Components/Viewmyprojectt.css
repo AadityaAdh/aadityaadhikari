@@ -151,7 +151,7 @@
 @media (max-width: 900px) {
   .viewmyprojectcontents * {
     all: unset;
-    font-size: 10px !important;
+    font-size: 15px !important;
     
     color: rgb(150, 150, 150) !important;
   }
@@ -161,15 +161,15 @@
   }
 
   .viewmyprojecttableofcontents{
-    font-size: 10px;
+    font-size: 25px;
   }
 
   .viewmyprojecttableelements{
-    font-size: 10px !important;
+    font-size: 15px !important;
   }
 
   .viewmyprojectsummary{
-    font-size: 10px;
+    font-size: 15px;
     color: rgb(150, 150, 150);
   }
 
@@ -179,6 +179,20 @@
 
   .viewmyprojectoutercontainer img{
     height: 30vh;
+  }
+  .viewmyprojectdowncontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  .tableofcontentscontainer{
+    position:static !important;
+    width: 100%;
+
+  }
+  .viewmyprojectcontents{
+    width: 100%;
   }
 
   

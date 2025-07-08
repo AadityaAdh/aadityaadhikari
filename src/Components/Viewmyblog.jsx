@@ -229,8 +229,6 @@ export default function Viewmyblog() {
           <div className='viewmyprojectshrline'></div>
 
           <div className='viewmyprojectdowncontainer'>
-        
-            <div className='viewmyprojectcontents' dangerouslySetInnerHTML={{ __html: modifiedHtml }}></div>
             <div className='tableofcontentscontainer'>
               <br></br>
 
@@ -247,6 +245,9 @@ export default function Viewmyblog() {
 
               
             </div>
+        
+            <div className='viewmyprojectcontents' dangerouslySetInnerHTML={{ __html: modifiedHtml }}></div>
+            
 
           </div>
 
