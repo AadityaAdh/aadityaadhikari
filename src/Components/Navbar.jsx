@@ -97,7 +97,7 @@ export default function Navbar() {
 
     async function handlelogout() {
         const response = await fetch(`https://aadityaadhbackend.onrender.com/logout`, {
-                    method: "POST",
+                    method: "GET",
                     credentials: 'include'
                 });
 
