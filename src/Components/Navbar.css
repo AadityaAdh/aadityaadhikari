@@ -4,7 +4,7 @@
     width: 80%;
     height: 100%;
     background-color: black;
-    border-bottom: 1px grey solid;
+    border-bottom: 1px rgb(37, 37, 37) solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@
 }
 
 .navbarbuttons:hover{
-    color: red;
+    color: #3ccf91;
     cursor: pointer;
 }
 

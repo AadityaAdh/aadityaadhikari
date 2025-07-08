@@ -1,0 +1,109 @@
+.aboutmecontainer {
+    width: 80%;
+    /* background-color: black; */
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    border-radius: 8px;
+
+
+
+}
+
+
+
+
+/* From Uiverse.io by EmmaxPlay */
+.aboutmecard {
+    width: 100%;
+    min-height: 70vh;
+    margin: 0 auto;
+    background-color: #011522;
+    /* background-color: #368cc1; */
+    /* background-color: rgb(0, 67, 192); */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.aboutmetools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+
+}
+
+.aboutmecircle {
+    padding: 0 4px;
+}
+
+.aboutmebox {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.aboutmered {
+    background-color: #ff605c;
+}
+
+.aboutmeyellow {
+    background-color: #ffbd44;
+}
+
+.aboutmegreen {
+    background-color: #00ca4e;
+}
+
+
+.aboutme_card__content {
+    color: white;
+    font-size: 16px;
+}
+
+.aboutme_card__content p {
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.codequestion {
+    color: #4ade80;
+
+
+}
+
+.fullwidthaboutmeending {
+    width: 100%;
+    height: 40px;
+    /* background-color: #00ca4e; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.centerendingaboutmeending {
+    width: 13%;
+    height: 100%;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.centerendingaboutmeending img {
+    height: 90%;
+    width: 40px;
+}

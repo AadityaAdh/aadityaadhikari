@@ -27,6 +27,12 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
+    gap: 5px;
+    
+}
+
+.articleitemscontainer:hover{
+    cursor: pointer;
 }
 
 .article_latest{
@@ -58,6 +64,10 @@
 
 .article_data{
     color: #3CCF91;
+}
+
+.article_view:hover{
+    cursor: pointer;
 }
 
 @media(max-width:1000px){

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const [tokenverified,settokenverified]=useState(false);
     function handlemenubutton(actionstodo){
         let mobilecontainer=document.querySelector(".mobilemenucontainer");
         if (actionstodo=="show"){
@@ -63,6 +64,49 @@ export default function Navbar() {
 
     }
 
+    function handlelogin(){
+        navigate('/login')
+    }
+    useEffect(()=>{
+        async function getprofile(){
+        try{
+        
+        const response = await fetch(`http://localhost:4005/profile`, {
+                    method: "GET",
+                    credentials: 'include'
+                });
+
+        if (response.ok){
+            
+            settokenverified(true)
+        }
+        else{
+            settokenverified(false)
+        }
+    }
+    catch(error){
+        console.log(error)
+    }
+    
+    
+    
+    }
+        getprofile()
+    },[])
+
+    async function handlelogout() {
+        const response = await fetch(`http://localhost:4005/logout`, {
+                    method: "POST",
+                    credentials: 'include'
+                });
+
+        if (response.ok){
+            settokenverified(false)
+            navigate('/')
+        }
+        
+    }
+
 
   return (
     <div className='navbarcontainer'>
@@ -76,6 +120,9 @@ export default function Navbar() {
             <button className='navbarbuttons' onClick={handleabout}>About</button>
             <button className='navbarbuttons' onClick={handleservices}>Services</button>
             <button className='navbarbuttons' onClick={handlecontact}>Contact</button>
+            {!tokenverified &&(<button className='navbarbuttons' onClick={handlelogin}>Login</button>)}
+            {tokenverified &&(<button className='navbarbuttons' onClick={handlelogout}>Logout</button>)}
+            
             <p className='menuicon' onClick={()=>handlemenubutton("show")}><TiThMenu /></p>
         </div>
 

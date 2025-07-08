@@ -1,19 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import './Projects.css'
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { IoLogoNodejs } from "react-icons/io5";
-import { FaJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { FaPython } from "react-icons/fa6";
-import { SiTensorflow } from "react-icons/si";
-import { SiOpencv } from "react-icons/si";
 import { Tilt } from 'react-tilt'
-import { IoIosArrowRoundForward } from "react-icons/io";
+
+
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaPython, FaPhp } from "react-icons/fa";
+import { SiMongodb, SiTensorflow, SiMysql, SiOpencv, SiExpress } from "react-icons/si";
+
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Projects() {
+
+    const navigate=useNavigate();
     
+    const [pd, setpd] = useState();
+    const iconMap = {
+            react: <FaReact />,
+            node: <FaNodeJs />,
+            express: <SiExpress />,
+            mongo: <SiMongodb />,
+            tensorflow: <SiTensorflow />,
+            python: <FaPython />,
+            opencv: <SiOpencv />,
+            mysql: <SiMysql />,
+            php: <FaPhp />,
+        };
+
     const defaultOptions = {
         reverse: false,  // reverse the tilt direction
         max: 35,     // max tilt rotation (degrees)
@@ -25,25 +39,73 @@ export default function Projects() {
         reset: true,    // If the tilt effect has to be reset on exit.
         easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
     }
-    useEffect(() => {
-        let projectcontainer = document.querySelector('.projectscontainer');
-        let windowheight = window.innerHeight;
 
-        let mydistfromparent = projectcontainer.offsetTop;
-        let myheight = projectcontainer.offsetHeight;
-        window.onscroll = function () {
-            let katiscrollvayo = window.scrollY + windowheight;
-            if (katiscrollvayo > mydistfromparent && katiscrollvayo < mydistfromparent + myheight) {
-                projectcontainer.classList.add('bottomtotopanimationclass1')
+    useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('displayanimation');
+            } 
+        });
+    });
+    const allhereobserver = document.querySelectorAll('.hereobserver');
+    allhereobserver.forEach((el) => observer.observe(el));
+
+    
+
+    
+}, [pd]);
+
+
+
+
+    useEffect(() => {
+        async function getposts() {
+            try {
+
+                const response = await fetch(`http://localhost:4005/posts`, {
+                    method: "GET",
+
+                });
+
+                if (response.ok) {
+                    const allitems = await response.json();
+                    setpd(allitems.post);
+                    //console.log(allitems.post[0].techstack.split(","))
+                    console.log(allitems)
+
+                }
+                else {
+                    console.log("unsucess")
+                }
+
+            }
+            catch (error) {
+                console.log(error)
+
             }
 
+
+
         }
+        getposts()
+
+
+
     }, [])
+    if (!pd) return (<img src='infinity.svg'></img>)
 
-    
+    function handleclick(id){
+        navigate(`/viewmyproject/${id}`)
+        
+    }
 
 
-    
+
+
+
+
+
 
 
     return (
@@ -51,164 +113,127 @@ export default function Projects() {
 
             <div className="projectsleftitemscontainer">
                 <p><span className='all_creatuve_works'>All Creative Works</span><br /><span className='projects_here_some'>Here's some of my projects that I have worked on</span>.<br /><span className='projects_explore_more'>Explore more →</span></p>
-                <div className='projectsproject1' >
-                    <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject1container">
-                            <img src='PrativaChemicals.png'></img>
-                            <div className='project_descriptions'>
-                                <div className='ninetyfivewidth'>
-                                    <div className='projectsnameandlink'>
-                                        <h2 className='projectsprojectname'>Prativa Chemicals Website(MERN)</h2>
-                                        <p className='projectsexternallink'><FaExternalLinkAlt /></p>
-                                    </div>
-                                    <br />
-                                    <div className='projects_buttons'>
-
-                                        <button className='projectsreact'>&nbsp;&nbsp;&nbsp;&nbsp;<span><FaReact /></span> React&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsnode'>&nbsp;&nbsp;&nbsp;&nbsp;<span><IoLogoNodejs /></span> Node.js&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsexpress'>&nbsp;&nbsp;&nbsp;&nbsp;<span><FaJs /></span>Express&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsmongo'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiMongodb /></span> Mongo&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                    <br/>
-
-                                    <hr  />
-                                    <br />
-                                    <p className='projects_descriptionss'>
-                                    An e-commerce website for seamless shopping and management of detergent products.
-                                    </p>
-
-                                        <br></br>
-
-                                </div>
-
-                            </div>
-
-
-
+                <div onClick={()=>handleclick(pd[0]._id)} className='te'>
+                    <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
+                    <img src={`http://localhost:4005/${pd[0].image}`}></img>
+                    <div className="projectcontentssection">
+                        <div className="projecttitleandnavbarcontainer">
+                            <h1>{pd[0].title}</h1>
+                            <FaExternalLinkAlt/>
 
                         </div>
 
-                    </Tilt>
+                        <div className="projectbuttonsection">
+                            {pd[0].techstack.split(",").map((tool, index) => (
+                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                            </button>
+                        ))}
 
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <p>{pd[0].summary}</p>
 
-
+                    </div>
+                </Tilt>
                 </div>
-                <div className='projectsproject1' >
-                    <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject1container" >
-                            <img src='Airlinereservation.png'></img>
-                            <div className='project_descriptions'>
-                                <div className='ninetyfivewidth'>
-                                    <div className='projectsnameandlink'>
-                                        <h2 className='projectsprojectname'>Airline Reservation System</h2>
-                                        <p className='projectsexternallink'><FaExternalLinkAlt /></p>
-                                    </div>
-                                    <br />
-                                    <div className='projects_buttons'>
-                                        <button className='projectsreact'>&nbsp;&nbsp;&nbsp;&nbsp;<span><FaReact /></span>PHP&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsnode'>&nbsp;&nbsp;&nbsp;&nbsp;<span><IoLogoNodejs /></span>JS&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsexpress'>&nbsp;&nbsp;&nbsp;&nbsp;<span><FaJs /></span>MySQL&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsmongo'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiMongodb /></span>HTML&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                    <br/>
 
-                                    <hr  />
-                                    <br />
-                                    <p className='projects_descriptionss'>
-                                    An efficient system for booking and managing airline reservations.
-                                    </p>
-                                    <br></br>
-                                </div>
-                            </div>
-
+                <div onClick={()=>handleclick(pd[1]._id)} className='te'>
+                    <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
+                    <img src={`http://localhost:4005/${pd[1].image}`}></img>
+                    <div className="projectcontentssection">
+                        <div className="projecttitleandnavbarcontainer">
+                            <h1>{pd[1].title}</h1>
+                            <FaExternalLinkAlt/>
 
                         </div>
-                    </Tilt>
 
+                        <div className="projectbuttonsection">
+                            {pd[1].techstack.split(",").map((tool, index) => (
+                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                            </button>
+                        ))}
+
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <p>{pd[1].summary}</p>
+
+                    </div>
+                </Tilt>
+                </div>
                 
 
-
-                </div>
 
 
 
 
             </div>
             <div className="projectsrightitemscontainer">
-                <div className='projectsproject2' >
-
-                    <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject2container">
-                            <img src='Facerecognition.jpg'></img>
-                            <div className='project_descriptions'>
-                                <div className='ninetyfivewidth'>
-                                    <div className='projectsnameandlink'>
-                                        <h2 className='projectsprojectname'>Face Recognition System</h2>
-                                        <p className='projectsexternallink'><FaExternalLinkAlt /></p>
-                                    </div>
-                                    <br />
-                                    <div className='projects_buttons'>
-                                        <button className='projectspython'>&nbsp;&nbsp;&nbsp;&nbsp;<span><FaPython /></span>Python&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectstensorflow'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiTensorflow /></span>Tensorflow&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsopencv'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiOpencv /></span>Open CV&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsmongo'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiMongodb /></span>Mongo DB&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                    <br/>
-
-                                    <hr  />
-                                    <br />
-                                    <p className='projects_descriptionss'>
-                                    A Face Recognition System that accurately identifies individuals
-                                     for secure authentication and attendance management
-                                    </p>
-
-                                    <br></br>
-                                </div>
-                            </div>
-
+                <div onClick={()=>handleclick(pd[2]._id)} className='te'>
+                    <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
+                    <img src={`http://localhost:4005/${pd[2].image}`}></img>
+                    <div className="projectcontentssection">
+                        <div className="projecttitleandnavbarcontainer">
+                            <h1>{pd[2].title}</h1>
+                            <FaExternalLinkAlt/>
 
                         </div>
-                    </Tilt>
 
+                        <div className="projectbuttonsection">
+                            {pd[2].techstack.split(",").map((tool, index) => (
+                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                            </button>
+                        ))}
 
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <p>{pd[2].summary}</p>
+
+                    </div>
+                </Tilt>
                 </div>
 
-                <div className='projectsproject2' >
-
-                    <Tilt options={defaultOptions} className='border'>
-                        <div className="projectsproject2container" >
-                            <img src='trafficsigngeneration.jpg'></img>
-                            <div className='project_descriptions'>
-                                <div className='ninetyfivewidth'>
-                                    <div className='projectsnameandlink'>
-                                        <h2 className='projectsprojectname'>Traffic sign recognition and generation</h2>
-                                        <p className='projectsexternallink'><FaExternalLinkAlt /></p>
-                                    </div>
-                                    <br />
-                                    <div className='projects_buttons'>
-                                        <button className='projectspython'><span>&nbsp;&nbsp;&nbsp;&nbsp;<FaPython /></span>Python&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectstensorflow'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiTensorflow /></span>Tensorflow&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsopencv'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiOpencv /></span>Open CV&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                        <button className='projectsmongo'>&nbsp;&nbsp;&nbsp;&nbsp;<span><SiMongodb /></span>Mongo DB&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                    <br/>
-
-
-                                    <hr  />
-                                    <br />
-                                    <p className='projects_descriptionss'>
-                                    A system for recognizing and generating traffic signs using GANs for
-                                     accurate detection and realistic sign generation.
-                                    </p>
-                                    <br></br>
-                                </div>
-                            </div>
-
+                <div onClick={()=>handleclick(pd[3]._id)} className='te'>
+                    <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
+                    <img src={`http://localhost:4005/${pd[3].image}`}></img>
+                    <div className="projectcontentssection">
+                        <div className="projecttitleandnavbarcontainer">
+                            <h1>{pd[3].title}</h1>
+                            <FaExternalLinkAlt/>
 
                         </div>
-                    </Tilt>
 
+                        <div className="projectbuttonsection">
+                            {pd[3].techstack.split(",").map((tool, index) => (
+                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                            </button>
+                        ))}
 
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <p>{pd[3].summary}</p>
+
+                    </div>
+                </Tilt>
                 </div>
 
             </div>

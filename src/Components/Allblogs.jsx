@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Allprojects.css'
+import './Allblogs.css'
 import { FaSearch } from "react-icons/fa";
 import Viewmyprojectt from './Viewmyprojectt';
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -9,7 +10,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 
 
-export default function Allprojects() {
+export default function Allblogs() {
     const [mytitle, setmytitle] = useState('');
     const [viewmyprojects, setviewmyprojects] = useState(false);
     const [searchdata, changesearchdata] = useState('');
@@ -46,19 +47,23 @@ export default function Allprojects() {
 
     useEffect(()=>{
         async function getposts(){
+            console.log("hit here")
                 try{
                 
-                const response = await fetch(`http://localhost:4005/posts`, {
+                const response = await fetch(`http://localhost:4005/blogs`, {
                             method: "GET",
                             
                         });
         
                 if (response.ok){
                     const allitems = await response.json();
-                    setpd(allitems.post);
+                    
+                    
+                    setpd(allitems.blog);
                     //console.log(allitems.post[0].techstack.split(","))
                     
                 }
+                
                 else{
                     console.log("unsucess")
                 }
@@ -89,13 +94,13 @@ export default function Allprojects() {
         php: <FaPhp />,
     };
 
-    function handleviewmyprojectcard(id) {
-        navigate(`/viewmyproject/${id}`)
+    function handleviewmyblog(id) {
+        navigate(`/viewmyblog/${id}`)
 
 
     }
     function handlewritepost(){
-        navigate('/writepost')
+        navigate('/writeblog')
 
     }
     return (
@@ -103,57 +108,39 @@ export default function Allprojects() {
             <div className='allprojectscontainer'>
                 
                 <div className="allprojectsupcontainer">
-                    {isadmin && (<button className='allprojectswritepost' onClick={handlewritepost}>Write Posts</button>)}
+                    {isadmin && (<button className='allprojectswritepost' onClick={handlewritepost}>Write Blogs</button>)}
 
-                    <h2 className='allprojectsprojects'>Projects</h2>
+                    <h2 className='allprojectsprojects'>Blogs</h2>
                     <br></br>
-                    <p className='allprojectsilove'>I love building projects and practice my engineering skills, here's an archive of things that I've worked on</p>
+                    <p className='allprojectsilove'>This is where I share my writings on programming, tutorials, and my experiences.</p>
                     <br></br>
                     <div className="allprojectssearchcontainer">
-                        <input type="text" placeholder='  Search Projects' value={searchdata} onChange={(e) => changesearchdata(e.target.value)} />
+                        <input type="text" placeholder='  Search Blogs' value={searchdata} onChange={(e) => changesearchdata(e.target.value)} />
                         <p><FaSearch /></p>
                     </div>
                     <p>&nbsp;</p>
                     
 
                 </div>
-                
-                <div className='projectshr'></div>
-                <br></br>
-                
+                <div className='blogshr'></div>
 
-                <div className="allprojectsdowncontainer">
-                    
+                <div className="allmyblogsdowncontainer">
+                    <div className='bloggap'></div>
                     {
                         pd.map((element, i) => (
                             element.title.toLowerCase().includes(searchdata.toLowerCase()) ? (
-                                <div className="allprojectsprojectcard" key={i} onClick={() => handleviewmyprojectcard(element._id)}>
-                                    <img src={`http://localhost:4005/${element.image}`}></img>
-                                    <br></br>
-                                    <div className='allprojectsprojectcardtextsection'>
-                                        <div className='allprojectsprojecttitle'>
-                                            <p>{element.title}</p>
-
-                                            <FaExternalLinkAlt />
-
-                                        </div>
-                                        <br></br>
-                                        <div className='allprojectstools'>
-                                        {element.techstack.split(",").map((tool, index) => (
-                                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
-                                            {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
-                                        </button>
-                                        ))}
-
-                                        </div>
-                                        <br></br>
-                                        <div className='projectssechr'></div>
-                                        <br></br>
-
-                                        
-                                        <p className='allprojectsdescription'>{element.summary}<br></br><br></br></p>
+                                <div className='singleblogcontainer' onClick={()=>handleviewmyblog(element._id)}>
+                                    <div className="datetimecontainer">
+                                        <p>{element.date}</p>
+                                        <p>{element.minread} read</p>
                                     </div>
-                                </div>) : null
+                                    <div className="blogcontentscontainer">
+                                        <p className='blogstitle'>{element.title}</p>
+                                        <p className='blogssummary'>{element.summary}</p>
+                                        <p className='blogslm'>Learn more →</p>
+                                    </div>
+                                </div>
+                                ) : null
                         ))
                     }
 

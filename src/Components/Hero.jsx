@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Hero.css'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+
+import {useTypewriter,Cursor} from 'react-simple-typewriter';
+
 
 export default function Hero() {
 
   const openLink = (url) => {
     window.location.href = url;
   };
+
+  
+    const [text]=useTypewriter({
+    words:['Computer Engineer','Data Engineer','Avgeek'],
+    loop:{},
+    typeSpeed:200,
+    deleteSpeed:200,
+  })
+
+  
+
+  
+  
+  
+
+  
   return (
     <div className='herocontainer'>
         <div className="heroitemscontainer">
             <p className='heroheythere'>Hey There I'm- </p>
             <h1 className='heromyname'>Aaditya Adhikari.</h1>
-            <p className='herowho'><span className='herocomputerengineer'>Computer Engineer.</span>A self-taught developer with an<br/> interest in Computer Science</p>
+            <p className='herowho'><span className='herocomputerengineer'>{text||''}<Cursor/></span><br></br>A self-taught developer with an<br/> interest in Computer Science</p>
             <br></br><br></br>
             <p className='herospecalize'>🚀 Currently Specalizing In Data Engineering</p>
             <p className='herostatus'>⚡ Intern at <span className='hero_green'>GrowByData</span></p>

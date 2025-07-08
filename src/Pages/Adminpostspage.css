@@ -1,0 +1,15 @@
+.adminpostspage_outercontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: black;
+}
+
+.adminpostssectionoutercontainer{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}

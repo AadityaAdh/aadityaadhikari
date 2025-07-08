@@ -3,22 +3,25 @@ import './About.css'
 
 export default function About() {
 
+  
   useEffect(() => {
-    let aboutcontainer = document.querySelector('.aboutcontainer');
-    let windowheight1 = window.innerHeight;
-
-    let mydistfromparent = aboutcontainer.offsetTop;
-    let myheight = aboutcontainer.offsetHeight;
-    window.onscroll = function () {
-      let katiscrollvayo = window.scrollY + windowheight1;
-      if (katiscrollvayo > mydistfromparent && katiscrollvayo < mydistfromparent + myheight) {
-        aboutcontainer.classList.add('bottomtotopanimationclass')
-      }
-
-    }
-  }, [])
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  
+                  entry.target.classList.add('displayanimation');
+              } 
+          });
+      });
+      const allhereobserver = document.querySelectorAll('.hereobserver');
+      allhereobserver.forEach((el) => observer.observe(el));
+  
+      
+  
+      
+  }, []);
   return (
-    <div className='aboutcontainer'>
+    <div className='aboutcontainer hereobserver'>
       <div className="aboutleftitemscontainer">
         <h2 className='about_aboutme'>⚡ About Me</h2>
         <p className='about_description'>
