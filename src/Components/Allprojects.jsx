@@ -9,6 +9,9 @@ import { SiApacheairflow } from "react-icons/si";
 import { SiApachespark } from "react-icons/si";
 import { IoLogoDocker } from "react-icons/io5";
 import { SiSelenium } from "react-icons/si";
+import { BiLogoJavascript } from "react-icons/bi";
+import { FaHtml5 } from "react-icons/fa6";
+import { PiFileCppFill } from "react-icons/pi";
 import { useNavigate, useParams } from 'react-router-dom'
 
 
@@ -110,7 +113,11 @@ export default function Allprojects() {
         airflow: <SiApacheairflow />,
         spark: <SiApachespark />,
         docker: <IoLogoDocker />,
-        selenium: <SiSelenium />
+        selenium: <SiSelenium />,
+        html: <FaHtml5 />,
+        javascript: <BiLogoJavascript/>,
+        cpp:<PiFileCppFill />
+
     };
 
     function handleviewmyprojectcard(id) {

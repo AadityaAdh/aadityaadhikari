@@ -10,6 +10,9 @@ import { SiApacheairflow } from "react-icons/si";
 import { SiApachespark } from "react-icons/si";
 import { IoLogoDocker } from "react-icons/io5";
 import { SiSelenium } from "react-icons/si";
+import { BiLogoJavascript } from "react-icons/bi";
+import { FaHtml5 } from "react-icons/fa6";
+import { PiFileCppFill } from "react-icons/pi";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -17,24 +20,27 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Projects() {
 
-    const navigate=useNavigate();
-    
+    const navigate = useNavigate();
+
     const [pd, setpd] = useState();
     const iconMap = {
-            react: <FaReact />,
-            node: <FaNodeJs />,
-            express: <SiExpress />,
-            mongo: <SiMongodb />,
-            tensorflow: <SiTensorflow />,
-            python: <FaPython />,
-            opencv: <SiOpencv />,
-            mysql: <SiMysql />,
-            php: <FaPhp />,
-            airflow: <SiApacheairflow />,
-            spark: <SiApachespark />,
-            docker: <IoLogoDocker />,
-            selenium: <SiSelenium />
-        };
+        react: <FaReact />,
+        node: <FaNodeJs />,
+        express: <SiExpress />,
+        mongo: <SiMongodb />,
+        tensorflow: <SiTensorflow />,
+        python: <FaPython />,
+        opencv: <SiOpencv />,
+        mysql: <SiMysql />,
+        php: <FaPhp />,
+        airflow: <SiApacheairflow />,
+        spark: <SiApachespark />,
+        docker: <IoLogoDocker />,
+        selenium: <SiSelenium />,
+        html: <FaHtml5 />,
+        javascript: <BiLogoJavascript />,
+        cpp: <PiFileCppFill />
+    };
 
     const defaultOptions = {
         reverse: false,  // reverse the tilt direction
@@ -49,20 +55,20 @@ export default function Projects() {
     }
 
     useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('displayanimation');
-            } 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('displayanimation');
+                }
+            });
         });
-    });
-    const allhereobserver = document.querySelectorAll('.hereobserver');
-    allhereobserver.forEach((el) => observer.observe(el));
+        const allhereobserver = document.querySelectorAll('.hereobserver');
+        allhereobserver.forEach((el) => observer.observe(el));
 
-    
 
-    
-}, [pd]);
+
+
+    }, [pd]);
 
 
 
@@ -103,9 +109,9 @@ export default function Projects() {
     }, [])
     if (!pd) return (<img src='infinity.svg'></img>)
 
-    function handleclick(id){
+    function handleclick(id) {
         navigate(`/viewmyproject/${id}`)
-        
+
     }
 
 
@@ -117,69 +123,69 @@ export default function Projects() {
 
 
     return (
-        
+
         <div className='projectscontainer'>
 
             <div className="projectsleftitemscontainer">
                 <p><span className='all_creatuve_works'>All Creative Works</span><br /><span className='projects_here_some'>Here's some of my projects that I have worked on</span>.<br /><span className='projects_explore_more'>Explore more →</span></p>
-                <div onClick={()=>handleclick(pd[0]._id)} className='te'>
+                <div onClick={() => handleclick(pd[0]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`https://aadityaadhbackend.onrender.com/${pd[0].image}`}></img>
-                    <div className="projectcontentssection">
-                        <div className="projecttitleandnavbarcontainer">
-                            <h1>{pd[0].title}</h1>
-                            <FaExternalLinkAlt/>
+                        <img src={`https://aadityaadhbackend.onrender.com/${pd[0].image}`}></img>
+                        <div className="projectcontentssection">
+                            <div className="projecttitleandnavbarcontainer">
+                                <h1>{pd[0].title}</h1>
+                                <FaExternalLinkAlt />
+
+                            </div>
+
+                            <div className="projectbuttonsection">
+                                {pd[0].techstack.split(",").map((tool, index) => (
+                                    <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                        {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                                    </button>
+                                ))}
+
+                            </div>
+
+
+
+
+
+                            <p>{pd[0].summary}</p>
 
                         </div>
-
-                        <div className="projectbuttonsection">
-                            {pd[0].techstack.split(",").map((tool, index) => (
-                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
-                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
-                            </button>
-                        ))}
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <p>{pd[0].summary}</p>
-
-                    </div>
-                </Tilt>
+                    </Tilt>
                 </div>
 
-                <div onClick={()=>handleclick(pd[1]._id)} className='te'>
+                <div onClick={() => handleclick(pd[1]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`https://aadityaadhbackend.onrender.com/${pd[1].image}`}></img>
-                    <div className="projectcontentssection">
-                        <div className="projecttitleandnavbarcontainer">
-                            <h1>{pd[1].title}</h1>
-                            <FaExternalLinkAlt/>
+                        <img src={`https://aadityaadhbackend.onrender.com/${pd[1].image}`}></img>
+                        <div className="projectcontentssection">
+                            <div className="projecttitleandnavbarcontainer">
+                                <h1>{pd[1].title}</h1>
+                                <FaExternalLinkAlt />
+
+                            </div>
+
+                            <div className="projectbuttonsection">
+                                {pd[1].techstack.split(",").map((tool, index) => (
+                                    <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                        {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                                    </button>
+                                ))}
+
+                            </div>
+
+
+
+
+
+                            <p>{pd[1].summary}</p>
 
                         </div>
-
-                        <div className="projectbuttonsection">
-                            {pd[1].techstack.split(",").map((tool, index) => (
-                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
-                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
-                            </button>
-                        ))}
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <p>{pd[1].summary}</p>
-
-                    </div>
-                </Tilt>
+                    </Tilt>
                 </div>
-                
+
 
 
 
@@ -187,62 +193,62 @@ export default function Projects() {
 
             </div>
             <div className="projectsrightitemscontainer">
-                <div onClick={()=>handleclick(pd[2]._id)} className='te'>
+                <div onClick={() => handleclick(pd[2]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`https://aadityaadhbackend.onrender.com/${pd[2].image}`}></img>
-                    <div className="projectcontentssection">
-                        <div className="projecttitleandnavbarcontainer">
-                            <h1>{pd[2].title}</h1>
-                            <FaExternalLinkAlt/>
+                        <img src={`https://aadityaadhbackend.onrender.com/${pd[2].image}`}></img>
+                        <div className="projectcontentssection">
+                            <div className="projecttitleandnavbarcontainer">
+                                <h1>{pd[2].title}</h1>
+                                <FaExternalLinkAlt />
+
+                            </div>
+
+                            <div className="projectbuttonsection">
+                                {pd[2].techstack.split(",").map((tool, index) => (
+                                    <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                        {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                                    </button>
+                                ))}
+
+                            </div>
+
+
+
+
+
+                            <p>{pd[2].summary}</p>
 
                         </div>
-
-                        <div className="projectbuttonsection">
-                            {pd[2].techstack.split(",").map((tool, index) => (
-                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
-                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
-                            </button>
-                        ))}
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <p>{pd[2].summary}</p>
-
-                    </div>
-                </Tilt>
+                    </Tilt>
                 </div>
 
-                <div onClick={()=>handleclick(pd[3]._id)} className='te'>
+                <div onClick={() => handleclick(pd[3]._id)} className='te'>
                     <Tilt options={defaultOptions} className='titlcard hereobserver' onClick={handleclick}>
-                    <img src={`https://aadityaadhbackend.onrender.com/${pd[3].image}`}></img>
-                    <div className="projectcontentssection">
-                        <div className="projecttitleandnavbarcontainer">
-                            <h1>{pd[3].title}</h1>
-                            <FaExternalLinkAlt/>
+                        <img src={`https://aadityaadhbackend.onrender.com/${pd[3].image}`}></img>
+                        <div className="projectcontentssection">
+                            <div className="projecttitleandnavbarcontainer">
+                                <h1>{pd[3].title}</h1>
+                                <FaExternalLinkAlt />
+
+                            </div>
+
+                            <div className="projectbuttonsection">
+                                {pd[3].techstack.split(",").map((tool, index) => (
+                                    <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
+                                        {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
+                                    </button>
+                                ))}
+
+                            </div>
+
+
+
+
+
+                            <p>{pd[3].summary}</p>
 
                         </div>
-
-                        <div className="projectbuttonsection">
-                            {pd[3].techstack.split(",").map((tool, index) => (
-                            <button key={index} className={`icon-${tool.toLowerCase().trim()}`}>
-                                {iconMap[tool.toLowerCase().trim()] || "🔧"} {tool}
-                            </button>
-                        ))}
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <p>{pd[3].summary}</p>
-
-                    </div>
-                </Tilt>
+                    </Tilt>
                 </div>
 
             </div>
