@@ -164,14 +164,6 @@
         width: 100%;
     }
 
-
-
-
-
-
-
-
-
     .all_creatuve_works{
         font-size: 0.875rem;
     }
@@ -183,6 +175,23 @@
     }
     .projectsprojectname{
         font-size: 0.875rem;
+    }
+
+    .projecttitleandnavbarcontainer{
+        font-size: 10px;
+    }
+    .projectbuttonsection{
+        /* background-color: #3CCF91; */
+        font-size: 5px;
+        gap: 10px;
+    }
+
+    .projectbuttonsection button{
+        font-size: 7px;
+    }
+
+    .projectcontentssection p{
+        font-size: 8px;
     }
     
 
