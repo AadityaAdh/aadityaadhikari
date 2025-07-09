@@ -69,6 +69,7 @@
 }
 .viewmyprojectcontents ul{
     list-style-position: inside;
+    padding-left: 20px;
 }
 
 .tableofcontentscontainer{
@@ -194,6 +195,10 @@
   .viewmyprojectcontents{
     width: 100%;
   }
+
+  .viewmyprojectcontents ul{
+    padding-left: 10px;
+}
 
   
 }
