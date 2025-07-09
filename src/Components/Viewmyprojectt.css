@@ -150,7 +150,7 @@
 
 @media (max-width: 900px) {
   .viewmyprojectcontents * {
-    all: unset;
+    /* all: unset; */
     font-size: 15px !important;
     
     color: rgb(150, 150, 150) !important;
