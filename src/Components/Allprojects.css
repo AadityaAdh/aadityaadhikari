@@ -204,6 +204,12 @@
 .icon-mysql { background-color: #00758F; color: white; }  /* MySQL - Blue */
 .icon-php { background-color: #777BB4; color: white; }  /* PHP - Purple */
 
+.icon-airflow { background-color: #017CEE; color: white; }      /* Airflow - Blue */
+.icon-docker { background-color: #0db7ed; color: white; }       /* Docker - Light Blue */
+.icon-selenium { background-color: #43B02A; color: white; }     /* Selenium - Green */
+.icon-pyspark { background-color: #E25A1C; color: white; }      /* PySpark - Orange */
+
+
 
 
 @media(max-width:900px){

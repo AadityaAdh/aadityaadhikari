@@ -6,6 +6,10 @@ import { Tilt } from 'react-tilt'
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaPython, FaPhp } from "react-icons/fa";
 import { SiMongodb, SiTensorflow, SiMysql, SiOpencv, SiExpress } from "react-icons/si";
+import { SiApacheairflow } from "react-icons/si";
+import { SiApachespark } from "react-icons/si";
+import { IoLogoDocker } from "react-icons/io5";
+import { SiSelenium } from "react-icons/si";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -26,6 +30,10 @@ export default function Projects() {
             opencv: <SiOpencv />,
             mysql: <SiMysql />,
             php: <FaPhp />,
+            airflow: <SiApacheairflow />,
+            spark: <SiApachespark />,
+            docker: <IoLogoDocker />,
+            selenium: <SiSelenium />
         };
 
     const defaultOptions = {
